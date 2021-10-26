@@ -14,27 +14,28 @@ public class ProductService {
     @Autowired
     ProductRepository productRepository;
 
-    public void create(Product product){
+    public void create(Product product) {
         productRepository.create(product);
     }
 
-    public void delete (long id){
+    public void delete(long id) {
         productRepository.delete(id);
     }
 
-    public void update(Product product){
+    public Product update(Product product) {
         productRepository.update(product);
+        return product;
     }
 
-    public List<Product> readAll(){
+    public List<Product> readAll() {
         List<Product> productList = new ArrayList<>();
-        for(Product product : productRepository.readAll()){
+        for (Product product : productRepository.readAll()) {
             productList.add(product);
         }
         return productList;
     }
 
-    public Product showProductByID(long id){
+    public Product showProductByID(long id) {
         return productRepository.getProductById(id);
     }
 

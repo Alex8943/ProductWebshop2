@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create page</title>
+    <title>Create</title>
 </head>
 <body>
 
-
+<form action="/create" method="post">
+    <p>Produkt navn: </p>
+    <input type="text" name="productName" placeholder="navn">
+    <p>Produkt pris: </p>
+    <input type="text" name="productPrice" placeholder="pris">
+    <input type="submit" value="Tilføj produkt">
+</form>
 
 </body>
 </html>

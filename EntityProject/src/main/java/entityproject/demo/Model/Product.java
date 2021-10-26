@@ -6,13 +6,17 @@ public class Product {
     private String productName;
     private int productPrice;
 
-    public Product (long productID, String productName, int productPrice){
+    public Product(long productID, String productName, int productPrice) {
         this.productID = productID;
         this.productName = productName;
         this.productPrice = productPrice;
     }
 
-    public long getProductID(){
+    public Product() {
+
+    }
+
+    public long getProductID() {
         return this.productID;
     }
 
